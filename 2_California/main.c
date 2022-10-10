@@ -8,6 +8,7 @@ extern char *tzname[];
 int main() {
     time_t now;
     struct tm *sp;
+    putenv("TZ=America/Los_Angeles");
     (void) time( &now );
 
     printf("%s", ctime( &now ) );
